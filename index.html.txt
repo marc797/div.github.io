@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Div | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1 class="logo">DIV</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h2>Hi, I’m <span class="highlight">Div</span></h2>
+    <p>Assets • Investments • Development • Middlemanship</p>
+  </section>
+
+  <section id="about" class="content">
+    <h2>About Me</h2>
+    <p>Hi, I’m Div — focused on asset management, investment strategy, development projects, and digital trades. I bridge innovation with reliability to deliver results that matter.</p>
+  </section>
+
+  <section id="timeline" class="content">
+    <h2>Timeline</h2>
+    <ul class="timeline">
+      <li><span>2023</span> — Started managing assets across multiple digital platforms.</li>
+      <li><span>2024</span> — Developed automation systems for trading and management.</li>
+      <li><span>2025</span> — Expanding into portfolio development and middleman solutions.</li>
+    </ul>
+  </section>
+
+  <section id="portfolio" class="content">
+    <h2>Portfolio</h2>
+    <div class="projects">
+      <div class="card">
+        <img src="assets/project1.jpg" alt="Project 1">
+        <h3>Crypto Middleman Bot</h3>
+        <p>Automated secure trade system built on Discord and Tatum API.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="content">
+    <h2>Services</h2>
+    <ul class="services">
+      <li>Asset Management</li>
+      <li>Investments</li>
+      <li>Trades</li>
+      <li>Development</li>
+      <li>Middlemanship</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="content">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:div@yourdomain.com">div@yourdomain.com</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Div. All rights reserved.</p>
+  </footer>
+</body>
+</html>
