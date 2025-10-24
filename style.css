@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --bg: #0b0f19;
+  --fg: #e0e0e0;
+  --accent: #4b8cff;
+  --card-bg: #151b2d;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background: rgba(10, 14, 25, 0.8);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  color: var(--accent);
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: var(--fg);
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+#hero {
+  text-align: center;
+  padding: 10rem 2rem 6rem;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.content {
+  padding: 6rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.timeline li {
+  margin: 1rem 0;
+  border-left: 2px solid var(--accent);
+  padding-left: 1rem;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(75, 140, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.services {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.services li {
+  background: var(--card-bg);
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(75, 140, 255, 0.15);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #777;
+  font-size: 0.9rem;
+  background: #0a0e18;
+}
