@@ -1,72 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Div | Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Div — Neon Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <h1 class="logo">DIV</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#timeline">Timeline</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section id="hero">
-    <h2>Hi, I’m <span class="highlight">Div</span></h2>
-    <p>Assets • Investments • Development • Middlemanship</p>
-  </section>
+  <!-- =========================
+       BACKGROUND: STARS & NEBULA
+       Editable: change sizes / colors in style.css
+       ========================= -->
+  <div id="space">
+    <canvas id="stars"></canvas>
+    <div id="nebula"></div>
+  </div>
 
-  <section id="about" class="content">
-    <h2>About Me</h2>
-    <p>Hi, I’m Div — focused on asset management, investment strategy, development projects, and digital trades. I bridge innovation with reliability to deliver results that matter.</p>
-  </section>
+  <!-- =========================
+       SITE WRAPPER
+       ========================= -->
+  <div class="site">
 
-  <section id="timeline" class="content">
-    <h2>Timeline</h2>
-    <ul class="timeline">
-      <li><span>2023</span> — Started managing assets across multiple digital platforms.</li>
-      <li><span>2024</span> — Developed automation systems for trading and management.</li>
-      <li><span>2025</span> — Expanding into portfolio development and middleman solutions.</li>
-    </ul>
-  </section>
-
-  <section id="portfolio" class="content">
-    <h2>Portfolio</h2>
-    <div class="projects">
-      <div class="card">
-        <img src="assets/project1.jpg" alt="Project 1">
-        <h3>Crypto Middleman Bot</h3>
-        <p>Automated secure trade system built on Discord and Tatum API.</p>
+    <!-- =========================
+         HEADER / NAV (STATIC HEADINGS - zigzag enabled)
+         Section: HEADER
+         ========================= -->
+    <header class="header neon-panel">
+      <div class="brand">
+        <div class="logo">DIV</div>
+        <div class="site-title zig">DIV — Systems · Investments · Middlemanship</div>
       </div>
-    </div>
-  </section>
+      <nav class="nav">
+        <a class="zig" href="#hero">Home</a>
+        <a class="zig" href="#about">About</a>
+        <a class="zig" href="#timeline">Timeline</a>
+        <a class="zig" href="#portfolio">Portfolio</a>
+        <a class="zig" href="#contact">Contact</a>
+      </nav>
+    </header>
 
-  <section id="services" class="content">
-    <h2>Services</h2>
-    <ul class="services">
-      <li>Asset Management</li>
-      <li>Investments</li>
-      <li>Trades</li>
-      <li>Development</li>
-      <li>Middlemanship</li>
-    </ul>
-  </section>
+    <!-- =========================
+         HERO / BANNER
+         Main intro typed (neon) - this is excluded from zigzag + body-typing
+         Section: HERO
+         ========================= -->
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <!-- typed-target receives typing immediately -->
+        <h1 class="big-neon" id="typed-hero" aria-live="polite"></h1>
+        <p class="hero-sub" data-typed>This is Div — Assets · Investments · Trades · Dev · Middlemanship</p>
 
-  <section id="contact" class="content">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:div@yourdomain.com">div@yourdomain.com</a></p>
-  </section>
+        <div class="cta-row">
+          <a class="btn primary zig" href="#contact">Work with me</a>
+          <a class="btn zig" href="#portfolio">See portfolio</a>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>© 2025 Div. All rights reserved.</p>
-  </footer>
+    <!-- =========================
+         ABOUT SECTION
+         Headings: static (zig), Text: typed on scroll
+         Section: ABOUT
+         ========================= -->
+    <section id="about" class="content-section">
+      <h2 class="section-heading zig">About</h2>
+
+      <div class="content-card">
+        <p class="typed-on-scroll" data-typed>
+          Hi — I’m <strong>Div</strong>. I build reliable automation for asset management, run investment strategies,
+          execute trades, and act as a secure middleman for private deals. Everything on this site uses neon accents,
+          typed copy and subtle motion — easy to edit.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================
+         TIMELINE SECTION
+         Timeline has neon-line + neon-dot (animated)
+         Headings/Items: zig + typed descriptions
+         Section: TIMELINE
+         ========================= -->
+    <section id="timeline" class="content-section">
+      <h2 class="section-heading zig">Timeline</h2>
+
+      <div class="timeline-wrap">
+        <!-- left track -->
+        <div class="timeline-track" aria-hidden="true">
+          <div class="neon-line"></div>
+          <div id="neon-dot" class="neon-dot" aria-hidden="true"></div>
+        </div>
+
+        <!-- right column: list of timeline events -->
+        <ol class="timeline-list">
+          <li class="timeline-item">
+            <div class="time zig">2021</div>
+            <div class="event">
+              <h3 class="subheading zig">Started portfolio management</h3>
+              <p class="typed-on-scroll" data-typed>Built initial risk models and reporting for small portfolios.</p>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="time zig">2022</div>
+            <div class="event">
+              <h3 class="subheading zig">Trade automation prototyping</h3>
+              <p class="typed-on-scroll" data-typed>Prototyped bots and scripts to automate repeated flows and guardrails.</p>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="time zig">2023</div>
+            <div class="event">
+              <h3 class="subheading zig">Middlemanship MVP</h3>
+              <p class="typed-on-scroll" data-typed>Private-ticket workflow with manual verification and HTML transcripts.</p>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="time zig">2024</div>
+            <div class="event">
+              <h3 class="subheading zig">Integrations & scaling</h3>
+              <p class="typed-on-scroll" data-typed>Integrations with exchange APIs and better monitoring & logs.</p>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="time zig">2025</div>
+            <div class="event">
+              <h3 class="subheading zig">Current — Growing services</h3>
+              <p class="typed-on-scroll" data-typed>Ongoing projects across assets, trades, development and secure middleman operations.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =========================
+         PORTFOLIO SECTION
+         Cards: typed description on scroll; headings static + zig
+         Section: PORTFOLIO
+         ========================= -->
+    <section id="portfolio" class="content-section">
+      <h2 class="section-heading zig">Portfolio</h2>
+
+      <div class="grid">
+        <article class="card">
+          <div class="card-thumb"></div>
+          <h3 class="zig">Assets Management</h3>
+          <p class="typed-on-scroll" data-typed>Platform & dashboards to track multi-asset positions, P&L and risk limits.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb"></div>
+          <h3 class="zig">Trades Engine</h3>
+          <p class="typed-on-scroll" data-typed>Scripting + monitoring for cross-exchange execution with safety checks.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb"></div>
+          <h3 class="zig">Middlemanship</h3>
+          <p class="typed-on-scroll" data-typed>Private-ticket escrow workflows with transcript & manual verification.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================
+         CONTACT SECTION
+         Text typed on scroll
+         Section: CONTACT
+         ========================= -->
+    <section id="contact" class="content-section">
+      <h2 class="section-heading zig">Contact</h2>
+      <div class="content-card">
+        <p class="typed-on-scroll" data-typed>Email: <a href="mailto:div@yourdomain.com">div@yourdomain.com</a></p>
+        <p class="typed-on-scroll" data-typed>Twitter / X: <a href="#" target="_blank">@div</a></p>
+      </div>
+    </section>
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+    <footer class="footer">
+      <small class="typed-on-scroll" data-typed>© <span id="year"></span> Div — Built with neon vibes</small>
+    </footer>
+  </div>
+
 </body>
 </html>
+
